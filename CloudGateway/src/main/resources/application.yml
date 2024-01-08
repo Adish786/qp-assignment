@@ -1,0 +1,45 @@
+server:
+  port: 8082
+spring:
+  application:
+   name: API-GATEWAY
+  config:
+   import:
+    configserver:
+     http:
+      localhost: 8083
+  #Order Microservice
+  cloud:
+  gateway:
+  routes:
+   id: Order-Service
+       Payment-Service
+   url:
+     lb: //Order-Service
+         //Payment-Service
+         //Product-Service
+   predicates:
+    Path: /order/**
+          /payment/**
+          /product/**
+
+   filter:
+     name: CircuitBreaker
+           RequestRateLimiter
+     args:
+       name: Order-Service
+             Payment-Service
+             Product-Service
+             Product-Service
+       fallbackuri:
+         forward: /orderServiceFallback
+                  /paymentServiceFallback
+                  /productServiceFallback
+     redis-rate-limiter:
+       replenishRate: 1
+       burstCapacity: 1
+    # REDIS (RedisProperties)
+   redis:
+     port: 6379
+     database: 0
+     password: mypass

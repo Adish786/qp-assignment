@@ -1,0 +1,11 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jan 08 12:10:43 IST 2024
+https\://repo.spring.io/libs-snapshot-local/.error=Could not transfer artifact org.infinispan\:infinispan-build-configuration-parent\:pom\:14.0.9.Final from/to spring-snapshots (https\://repo.spring.io/libs-snapshot-local)\: status code\: 409, reason phrase\:  (409)
+https\://repo.maven.apache.org/maven2/.lastUpdated=1704696043308
+https\://repo.spring.io/libs-milestone-local/.error=
+https\://oss.jfrog.org/oss-snapshot-local/.lastUpdated=1704696043034
+https\://repo.spring.io/libs-milestone-local/.lastUpdated=1704696042807
+@default-spring-snapshots-https\://repo.spring.io/libs-snapshot-local/.lastUpdated=1704696042574
+@default-spring-releases-https\://repo.spring.io/release/.lastUpdated=1704696043273
+https\://oss.jfrog.org/oss-snapshot-local/.error=
+https\://repo.spring.io/release/.error=Could not transfer artifact org.infinispan\:infinispan-build-configuration-parent\:pom\:14.0.9.Final from/to spring-releases (https\://repo.spring.io/release)\: status code\: 401, reason phrase\:  (401)
